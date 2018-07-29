@@ -12,7 +12,7 @@ const task = {
   DEFAULT: 'default',
   CLEAN: 'clean',
   BUILD: 'build',
-  COPY: 'copy',
+  HTML: 'html',
   BS: 'bs',
   JS: 'js'
 };
@@ -22,9 +22,12 @@ const config = {
   distPath: './dist'
 };
 
-gulp.task(task.COPY,
+gulp.task(task.HTML,
   () => {
     return gulp.src(`${config.srcPath}/html/*.html`)
+      .pipe(plugins.htmlmin({
+        collapseWhitespace: true
+      }))
       .pipe(gulp.dest(`${config.distPath}`))
       .pipe(browserSync.stream());
   }
@@ -55,7 +58,7 @@ gulp.task(task.WATCH,
   () => {
     gulp.watch(`${config.srcPath}/styles/**/*.scss`, gulp.series(task.SASS));
     gulp.watch(`${config.srcPath}/js/**/*.js`, gulp.series(task.JS));
-    gulp.watch(`${config.srcPath}/html/**/*.html`, gulp.series(task.COPY));
+    gulp.watch(`${config.srcPath}/html/**/*.html`, gulp.series(task.HTML));
   }
 );
 
@@ -71,7 +74,7 @@ gulp.task(task.BUILD,
     gulp.parallel(
       task.SASS,
       task.JS,
-      task.COPY
+      task.HTML
     )
   )
 );
