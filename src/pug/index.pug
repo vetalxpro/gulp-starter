@@ -1,0 +1,16 @@
+extends layouts/_layout
+
+include mixins/_side-panel
+
+
+
+block content
+  .page-content
+    header.header
+      h1.page-title All Contacts
+    main.main main
+      button.btn.btn-primary Save
+  include components/_side-menu
+
+block scripts
+  script(src='js/main.bundle.js')

@@ -23,8 +23,12 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-load-plugins": "^1.5.0",
     "gulp-notify": "^3.2.0",
+    "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "webpack-stream": "^5.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
   }
 }

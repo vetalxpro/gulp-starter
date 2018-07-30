@@ -1,6 +1,13 @@
-body {
-  display: flex;
-  h1 {
-    color: green;
-  }
-}
+@import "../../node_modules/normalize.css/normalize";
+/**/
+@import "variables";
+@import "mixins/mixins";
+@import "fonts/fonts";
+/*common*/
+@import "base";
+@import "layouts";
+@import "theme";
+@import "state";
+/*modules*/
+@import "elements/index";
+@import "components/index";

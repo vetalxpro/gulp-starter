@@ -13,6 +13,7 @@ const task = {
   CLEAN: 'clean',
   BUILD: 'build',
   HTML: 'html',
+  PUG: 'pug',
   BS: 'bs',
   JS: 'js'
 };
@@ -26,7 +27,18 @@ gulp.task(task.HTML,
   () => {
     return gulp.src(`${config.srcPath}/html/*.html`)
       .pipe(plugins.htmlmin({
-        collapseWhitespace: true
+        // collapseWhitespace: true
+      }))
+      .pipe(gulp.dest(`${config.distPath}`))
+      .pipe(browserSync.stream());
+  }
+);
+
+gulp.task(task.PUG,
+  () => {
+    return gulp.src([ `${config.srcPath}/pug/*.pug`, `!${config.srcPath}/pug/_*.pug` ])
+      .pipe(plugins.pug({
+        pretty: true
       }))
       .pipe(gulp.dest(`${config.distPath}`))
       .pipe(browserSync.stream());
@@ -37,7 +49,9 @@ gulp.task(task.SASS,
   () => {
     return gulp.src(`${config.srcPath}/styles/*.scss`)
       .pipe(plugins.sourcemaps.init())
-      .pipe(plugins.sass())
+      .pipe(plugins.sass({
+        includePaths: [ 'node_modules' ]
+      }))
       .pipe(plugins.autoprefixer({
         browsers: [ 'last 2 versions' ]
       }))
@@ -49,7 +63,9 @@ gulp.task(task.SASS,
 
 gulp.task(task.JS, () => {
   return gulp.src(`${config.srcPath}/js/*.js`)
+  // .pipe(plugins.sourcemaps.init())
     .pipe(webpack(webpackConfig))
+    // .pipe(plugins.sourcemaps.write('.'))
     .pipe(gulp.dest(`${config.distPath}/js`))
     .pipe(browserSync.stream());
 });
@@ -58,7 +74,8 @@ gulp.task(task.WATCH,
   () => {
     gulp.watch(`${config.srcPath}/styles/**/*.scss`, gulp.series(task.SASS));
     gulp.watch(`${config.srcPath}/js/**/*.js`, gulp.series(task.JS));
-    gulp.watch(`${config.srcPath}/html/**/*.html`, gulp.series(task.HTML));
+    // gulp.watch(`${config.srcPath}/html/**/*.html`, gulp.series(task.HTML));
+    gulp.watch(`${config.srcPath}/pug/**/*.pug`, gulp.series(task.PUG));
   }
 );
 
@@ -74,7 +91,8 @@ gulp.task(task.BUILD,
     gulp.parallel(
       task.SASS,
       task.JS,
-      task.HTML
+      // task.HTML,
+      task.PUG
     )
   )
 );

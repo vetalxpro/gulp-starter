@@ -1,0 +1,38 @@
+$side-menu-padding: 65px;
+
+.side-menu {
+  padding-top: 15px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: fixed;
+  width: 330px;
+  background: linear-gradient(to top, #485173, #24283e);
+  &__title {
+    color: $white;
+    font-size: 38px;
+    font-weight: 700;
+    padding-left: $side-menu-padding;
+    margin-bottom: 50px;
+  }
+  .user {
+    padding-left: $side-menu-padding;
+    margin-bottom: 60px;
+  }
+  .search {
+    padding-left: $side-menu-padding;
+    margin-bottom: 30px;
+  }
+  .categories {
+    &__title {
+      color: $violet;
+      padding-left: $side-menu-padding;
+    }
+    &__list {
+
+    }
+    &__item {
+      padding-left: $side-menu-padding;
+    }
+  }
+}

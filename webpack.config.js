@@ -1,6 +1,7 @@
 const path = require('path');
 const config = {
   mode: 'production',
+  devtool: 'source-map',
   context: path.resolve(__dirname, 'src/js'),
   entry: {
     main: './main.js'
