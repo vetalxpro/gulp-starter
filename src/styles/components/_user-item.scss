@@ -1,0 +1,35 @@
+.user-item {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  margin-bottom: 65px;
+  position: relative;
+  padding-right: 40px;
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #d8d8d8;
+    border: 2px solid #c30e42;
+    flex: 0 0 48px;
+    margin-right: 13px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__info {
+
+  }
+  &__name {
+    font-size: 18px;
+  }
+  &__text {
+    font-size: 14px;
+  }
+  &__btn {
+    position: absolute;
+    top: 13px;
+    right: 45px;
+  }
+}

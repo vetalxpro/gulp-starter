@@ -1,0 +1,8 @@
+include _dots-btn
+mixin currentUser(user)
+  .user
+    a.user__avatar(href=user.link style=`background-image:url(${user.avatar})`)
+    .user__info
+      a.user__name(href=user.link)= user.name
+      .user__text= user.text
+    +dotsBtn(class="user__btn")

@@ -1,0 +1,27 @@
+-
+  var categories = [
+  {
+  name:'All Contacts',
+  link:'#'
+  },
+  {
+  name:'Family',
+  link:'#'
+  },
+  {
+  name:'Job',
+  link:'#'
+  },
+  {
+  name:'Fitness',
+  link:'#'
+  }
+
+  ];
+
+.categories
+  .categories__title.uppercase Categories
+  ul.categories__list
+    each category in categories
+      li.categories__item
+        a(href=category.link)= category.name

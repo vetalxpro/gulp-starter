@@ -1,0 +1,19 @@
+extends layouts/_layout
+
+include components/_action-btn
+include components/_edit-avatar
+
+block content
+  .page-content
+    header.header
+      h1.page-title Contact
+    main.main main
+      +actionBtn()
+        i.fa.fa-pencil
+      +actionBtn()
+        i.fa.fa-times
+      +editAvatar()
+  include components/_side-menu
+
+block scripts
+  script(src='js/main.bundle.js')

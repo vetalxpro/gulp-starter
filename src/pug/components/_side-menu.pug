@@ -1,43 +1,17 @@
-include ../mixins/_side-panel
-
+include _current-user
 -
-  var categories = [
-  {
-  name:'All Contacts',
-  link:'#'
-  },
-  {
-  name:'Family',
-  link:'#'
-  },
-  {
-  name:'Job',
-  link:'#'
-  },
-  {
-  name:'Fitness',
-  link:'#'
-  }
-
-  ];
+  var user = {
+  name: 'Vasya',
+  link:'/contact.html',
+  avatar:'https://source.unsplash.com/random/800x600',
+  text:'some text'
+  };
 
 aside.side-menu
   .side-menu__title Contact Book
-  .user
-    a.user__avatar(href='#')
-    .user__details
-      a.user__name(href='#') Name
-      a.user__link(href='#') Log out
-    .dropdown
-  .search
-    form.search__form
-      input(type='text' placeholder='Search a contact')
-  .categories
-    .categories__title.uppercase Categories
-    ul.categories__list
-      each category in categories
-        li.categories__item
-          a(href=category.link)= category.name
+  +currentUser(user)
+  include _search-contact
+  include _categories-list
   .coming-birhday
     .coming-birthday__title Coming birthday
 

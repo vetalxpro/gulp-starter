@@ -1,0 +1,30 @@
+include _user-item
+-
+  var users = [
+  {
+  name: 'Petya',
+  link:'/contact.html',
+  avatar:'https://source.unsplash.com/random/800x600',
+  text:'some text'
+  },
+  {
+  name: 'Vasya',
+  link:'/contact.html',
+  avatar:'https://source.unsplash.com/random/800x600',
+  text:'some text'
+  },
+  {
+  name: 'Sasha',
+  link:'/contact.html',
+  avatar:'https://source.unsplash.com/random/800x600',
+  text:'some text'
+  }
+  ];
+
+  var iterations = 5;
+
+ul.users-list
+  - for(var i=0;i<iterations;i+=1){
+  each user in users
+    +userItem(user)
+  - }
