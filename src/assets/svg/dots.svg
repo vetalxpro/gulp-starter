@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="3px" viewBox="0 0 15 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="layout-desktop(all_contact)" transform="translate(-262.000000, -183.000000)" fill="#ABAFC3" fill-rule="nonzero">
+            <g id="Group" transform="translate(0.000000, 63.000000)">
+                <g id="Group-7" transform="translate(55.000000, 107.000000)">
+                    <g id="more" transform="translate(207.000000, 13.000000)">
+                        <path d="M5.81020408,1.5 C5.81020408,0.671195652 6.56632653,0 7.5,0 C8.43367347,0 9.18979592,0.671195652 9.18979592,1.5 C9.18979592,2.32880435 8.43367347,3 7.5,3 C6.56632653,3 5.81020408,2.32880435 5.81020408,1.5 Z M13.3102041,0 C12.3765306,0 11.6204082,0.671195652 11.6204082,1.5 C11.6204082,2.32880435 12.3765306,3 13.3102041,3 C14.2438776,3 15,2.32880435 15,1.5 C15,0.671195652 14.2438776,0 13.3102041,0 Z M1.68979592,0 C0.756122449,0 0,0.671195652 0,1.5 C0,2.32880435 0.756122449,3 1.68979592,3 C2.62346939,3 3.37959184,2.32880435 3.37959184,1.5 C3.37959184,0.671195652 2.62346939,0 1.68979592,0 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

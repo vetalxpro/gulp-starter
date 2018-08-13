@@ -1,0 +1,123 @@
+.contact-form {
+  position: relative;
+  padding-top: 30px;
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    &--top {
+
+    }
+  }
+  &__left-col {
+    flex-basis: 182px;
+    max-width: 182px;
+    padding-right: 32px;
+    text-align: right;
+    .contact-form__label {
+      padding-top: 8px;
+    }
+  }
+  &__right-col {
+    min-width: 0;
+    flex: 1;
+    max-width: 100%;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  &__control {
+    width: 100%;
+    padding: 8px;
+    border: solid 1px #999999;
+    box-shadow: inset 0 0 10px 0 #e5e5e5;
+    margin-bottom: 15px;
+    &:focus {
+      border-color: #10b1df;
+      box-shadow: 0 0 4px 0 #10b1df, inset 0 0 10px 0 #e5e5e5;
+    }
+  }
+  .control-col {
+    flex-basis: 100%;
+    max-width: 100%;
+    &--50 {
+      flex-basis: 50%;
+      max-width: 50%;
+      padding: 0 20px;
+    }
+  }
+  &__control {
+
+  }
+
+  textarea.contact-form__control {
+    resize: none;
+    &--description {
+      min-height: 60px;
+    }
+    &--info {
+      min-height: 104px;
+    }
+
+  }
+  .action-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__actions {
+    padding-top: 90px;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '';
+      flex: 1;
+      height: 2px;
+      margin-right: 32px;
+      background-color: rgba(#9699a5, .5);
+    }
+    .btn {
+      margin-right: 32px;
+      min-width: 180px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .control-col {
+      &--50 {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+  @media (max-width: 670px) {
+    &__left-col,
+    &__right-col {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+    &__left-col {
+      text-align: left;
+    }
+    &__actions {
+      flex-wrap: wrap;
+      &::before {
+        display: none;
+      }
+      .btn {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

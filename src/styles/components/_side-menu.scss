@@ -1,13 +1,18 @@
-$side-menu-padding: 65px;
+$side-menu-padding: 55px;
 
 .side-menu {
   padding-top: 15px;
+  padding-bottom: 24px;
   top: 0;
   left: 0;
   height: 100%;
+  overflow-y: auto;
   position: fixed;
   width: 330px;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(to top, #485173, #24283e);
+  transition: transform 0.3s;
   &__title {
     color: $white;
     font-size: 38px;
@@ -19,20 +24,14 @@ $side-menu-padding: 65px;
     padding-left: $side-menu-padding;
     margin-bottom: 60px;
   }
-  .search {
-    padding-left: $side-menu-padding;
-    margin-bottom: 30px;
+  .menu-new-contact-wrapper {
+    margin-top: auto;
   }
-  .categories {
-    &__title {
-      color: $violet;
-      padding-left: $side-menu-padding;
-    }
-    &__list {
-
-    }
-    &__item {
-      padding-left: $side-menu-padding;
-    }
+  .menu-padding {
+    padding-left: $side-menu-padding;
+    padding-right: $side-menu-padding;
+  }
+  @media (max-width: 700px) {
+    transform: translateX(-100%);
   }
 }

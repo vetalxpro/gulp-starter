@@ -2,6 +2,9 @@
   border-radius: 25px;
   padding: 10px 20px;
   text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
   border: 2px solid transparent;
   background-color: transparent;
@@ -12,7 +15,9 @@
       box-shadow: 0 0 0 1px rgba(#10b1df, 0.5);
     }
     &--outline {
+      color: #10b1df;
       background-color: transparent;
+      border-color: #10b1df;
     }
   }
 

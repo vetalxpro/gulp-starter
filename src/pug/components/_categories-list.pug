@@ -1,27 +1,31 @@
+include _dots-btn
 -
   var categories = [
   {
   name:'All Contacts',
-  link:'#'
+  link:'/',
+  active:true
   },
   {
   name:'Family',
-  link:'#'
+  link:'/'
   },
   {
-  name:'Job',
-  link:'#'
+  name:'Job123',
+  link:'/'
   },
   {
   name:'Fitness',
-  link:'#'
+  link:'/'
   }
 
   ];
 
 .categories
-  .categories__title.uppercase Categories
+  .categories__title.uppercase.menu-padding Categories
   ul.categories__list
     each category in categories
       li.categories__item
-        a(href=category.link)= category.name
+        a.categories__link.menu-padding(href=category.link class=category.active ? 'active' : '')
+          | #{category.name}
+          +dotsBtn()

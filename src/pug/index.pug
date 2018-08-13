@@ -1,14 +1,12 @@
 extends layouts/_layout
 
-include mixins/_side-panel
-
+include components/_header
 
 
 block content
   .page-content
-    header.header
-      h1.page-title All Contacts
-    main.main main
+    +header('All Contacts')
+    main.main
       include components/_users-list
   include components/_side-menu
 

@@ -1,4 +1,7 @@
-mixin actionBtn()
+mixin actionBtn(type)
   button.action-btn(type="button")
-    if(block)
-      block
+    case type
+      when 'delete'
+        i.fa.fa-times
+      when 'edit'
+        i.fa.fa-pencil

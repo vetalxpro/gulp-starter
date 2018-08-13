@@ -1,0 +1,20 @@
+.search {
+  margin-bottom: 30px;
+  &__form {
+
+  }
+  &__input {
+    width: 100%;
+    font-size: 19px;
+    padding: 7px 3px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(#fff, 0.5);
+    color: #ffffff;
+    outline: none;
+    transition: border-bottom-color 0.2s;
+    &:focus {
+      border-bottom-color: rgba(#fff, 1);
+    }
+  }
+}

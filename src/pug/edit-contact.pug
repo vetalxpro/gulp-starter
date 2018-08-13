@@ -1,14 +1,14 @@
 extends layouts/_layout
 
-include mixins/_side-panel
+include components/_header
 
 
 
 block content
   .page-content
-    header.header
-      h1.page-title Edit Contact
-    main.main main
+    +header('Edit Contact')
+    main.main
+      include components/_contact-form
   include components/_side-menu
 
 block scripts

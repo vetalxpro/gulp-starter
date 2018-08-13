@@ -3,6 +3,10 @@
 
 .page-content {
   margin-left: 330px;
+  transition: margin 0.3s;
+  @media (max-width: 700px) {
+    margin-left: 0;
+  }
 }
 
 .main {

@@ -1,2 +1,4 @@
 mixin dotsBtn()
-  button.dots-btn(type="button")&attributes(attributes) dots btn
+  button.dots-btn(type="button")&attributes(attributes)
+    svg.icon.icon-dots()
+      use(xlink:href="#icon-dots")

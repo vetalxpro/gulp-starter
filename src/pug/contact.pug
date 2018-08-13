@@ -2,16 +2,12 @@ extends layouts/_layout
 
 include components/_action-btn
 include components/_edit-avatar
+include components/_header
 
 block content
   .page-content
-    header.header
-      h1.page-title Contact
-    main.main main
-      +actionBtn()
-        i.fa.fa-pencil
-      +actionBtn()
-        i.fa.fa-times
+    +header('Contact')
+    main.main
       +editAvatar()
   include components/_side-menu
 

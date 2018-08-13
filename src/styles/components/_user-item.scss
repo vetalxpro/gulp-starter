@@ -1,10 +1,12 @@
 .user-item {
-  display: flex;
-  align-items: center;
   width: 25%;
   margin-bottom: 65px;
-  position: relative;
   padding-right: 40px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
   &__avatar {
     width: 48px;
     height: 48px;

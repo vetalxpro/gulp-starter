@@ -1,0 +1,59 @@
+include _edit-avatar
+include _action-btn
+
+form.contact-form(method='post' action='?')
+  +actionBtn('delete')
+  .contact-form__group.contact-form__group--top
+    .contact-form__left-col
+      +editAvatar()
+    .contact-form__right-col
+      .contact-form__row
+        .control-col.control-col--50
+          label.contact-form__label(for='name') Name
+          input.contact-form__control(type='text' id='name' placeholder='Name')
+        .control-col.control-col--50
+          label.contact-form__label(for='surname') Surname
+          input.contact-form__control(type='text' id='surname' placeholder='Surname')
+      .control-col
+        label.contact-form__label(for='description') Description
+        textarea.contact-form__control.contact-form__control--description(id='description' placeholder='Description')
+  .contact-form__group
+    .contact-form__left-col
+      label.contact-form__label(for='phone') Phone
+    .contact-form__right-col
+      .control-col
+        input.contact-form__control(type='text' id='phone' placeholder='Phone')
+  .contact-form__group
+    .contact-form__left-col
+      label.contact-form__label(for='email') Email
+    .contact-form__right-col
+      .control-col
+        input.contact-form__control(type='text' id='email' placeholder='Email')
+  .contact-form__group
+    .contact-form__left-col
+      label.contact-form__label(for='birthday') Birthday
+    .contact-form__right-col
+      .control-col
+        input.contact-form__control(type='text' id='birthday' placeholder='Birthday')
+  .contact-form__group
+    .contact-form__left-col
+      label.contact-form__label(for='info') Information
+    .contact-form__right-col
+      .control-col
+        textarea.contact-form__control.contact-form__control--info(id='info' placeholder='Information')
+  .contact-form__group
+    .contact-form__left-col
+      label.contact-form__label(for='instagramm') Instagramm
+    .contact-form__right-col
+      .control-col
+        input.contact-form__control(type='text' id='instagramm' placeholder='Instagramm')
+  .contact-form__group
+    .contact-form__left-col
+      label.contact-form__label(for='facebook') Facebook
+    .contact-form__right-col
+      .control-col
+        input.contact-form__control(type='text' id='facebook' placeholder='Facebook')
+  .contact-form__actions
+    button.btn.btn-primary(type='button') Save Changes
+    button.btn.btn-primary.btn-primary--outline(type='button') Cancel
+
