@@ -7,6 +7,7 @@ const config = {
     main: './main.js'
   },
   output: {
+    publicPath: 'js/',
     filename: '[name].bundle.js'
   },
   module: {

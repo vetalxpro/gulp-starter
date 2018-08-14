@@ -1,15 +1,17 @@
 extends layouts/_layout
 
-include components/_action-btn
-include components/_edit-avatar
 include components/_header
 
 block content
   .page-content
-    +header('Contact')
+    +header('Contact Information')
     main.main
-      +editAvatar()
+      include components/_contact-info
   include components/_side-menu
 
-block scripts
+append scripts
+  script.
+    window.CONFIG = {
+      PAGE: '/contact'
+    };
   script(src='js/main.bundle.js')

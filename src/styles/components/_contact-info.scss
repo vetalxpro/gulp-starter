@@ -1,0 +1,46 @@
+.contact-info {
+  position: relative;
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+    .action-btn {
+      margin-left: 18px;
+    }
+  }
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__avatar {
+    flex-shrink: 0;
+    margin-right: 32px;
+  }
+  &__user-info {
+
+  }
+  &__user-name {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  &__user-skills {
+
+  }
+  .info-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .left-col {
+    font-weight: bold;
+    padding-right: 16px;
+    text-align: right;
+    width: 200px;
+  }
+  .right-col {
+    flex: 1;
+    max-width: 100%;
+    min-width: 0;
+  }
+}

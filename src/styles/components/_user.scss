@@ -3,17 +3,10 @@
   align-items: center;
   position: relative;
   &__avatar {
-    width: 48px;
-    height: 48px;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #d8d8d8;
-    border: 2px solid #c30e42;
     flex: 0 0 48px;
     margin-right: 13px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
   &__info {
 

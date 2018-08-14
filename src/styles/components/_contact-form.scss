@@ -4,15 +4,13 @@
   &__group {
     display: flex;
     flex-wrap: wrap;
-    &--top {
-
-    }
   }
   &__left-col {
     flex-basis: 182px;
     max-width: 182px;
     padding-right: 32px;
     text-align: right;
+    display: flex;
     .contact-form__label {
       padding-top: 8px;
     }
@@ -90,7 +88,7 @@
       }
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: $tablet) {
     .control-col {
       &--50 {
         max-width: 100%;
@@ -98,7 +96,10 @@
       }
     }
   }
-  @media (max-width: 670px) {
+  @media (max-width: $mobile) {
+    &__avatar {
+      margin: 0 auto 20px;
+    }
     &__left-col,
     &__right-col {
       flex-basis: 100%;
@@ -106,6 +107,7 @@
     }
     &__left-col {
       text-align: left;
+      padding-right: 0;
     }
     &__actions {
       flex-wrap: wrap;

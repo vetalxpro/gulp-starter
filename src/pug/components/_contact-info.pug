@@ -1,0 +1,42 @@
+include _avatar
+include _action-btn
+
+.contact-info
+  .contact-info__actions
+    +actionBtn('edit')
+    +actionBtn('delete')
+  .contact-info__main
+    .contact-info__avatar
+      +avatar(true,false)
+    .contact-info__user-info
+      .contact-info__user-name Andy
+      .contact-info__user-skills
+        div HTML, CSS
+        div
+          | Developer &nbsp;
+          a(href='#') @hillel &nbsp;
+          | Musician in &nbsp;
+          a(href='#') @amatory
+
+  .info-group
+    .left-col
+      .info-group__label Phone
+    .right-col 212412412
+  .info-group
+    .left-col
+      .info-group__label Mobile Phone
+    .right-col 212412412
+  .info-group
+    .left-col
+      .info-group__label Email
+    .right-col email@
+  .info-group
+    .left-col
+      .info-group__label Information
+    .right-col text
+  .info-group
+    .left-col
+      .info-group__label Instagramm
+    .right-col photos
+
+

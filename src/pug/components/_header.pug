@@ -3,5 +3,8 @@ include _dots-btn
 mixin header(title)
   header.header
     .header__inner
+      button.header__menu-btn(type='button' data-menu-toggler='')
+        svg.icon.icon-menu
+          use(xlink:href='#icon-menu')
       h1.header__title=title
-      +dotsBtn
+      +dotsBtn()

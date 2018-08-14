@@ -27,5 +27,6 @@ include _dots-btn
     each category in categories
       li.categories__item
         a.categories__link.menu-padding(href=category.link class=category.active ? 'active' : '')
-          | #{category.name}
-          +dotsBtn()
+          .categories__link-inner
+            | #{category.name}
+            +dotsBtn()

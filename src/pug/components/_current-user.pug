@@ -1,7 +1,10 @@
 include _dots-btn
+include _avatar
+
 mixin currentUser(user)
   .user
-    a.user__avatar(href=user.link style=`background-image:url(${user.avatar})`)
+    a.user__avatar(href=user.link)
+      +avatar(false,false,true)
     .user__info
       a.user__name(href=user.link)= user.name
       .user__text= user.text

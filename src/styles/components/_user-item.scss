@@ -2,29 +2,29 @@
   width: 25%;
   margin-bottom: 65px;
   padding-right: 40px;
+  //min-width: 1px;
   &__inner {
     display: flex;
     align-items: center;
     position: relative;
+    padding-right: 35px;
   }
   &__avatar {
-    width: 48px;
-    height: 48px;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #d8d8d8;
-    border: 2px solid #c30e42;
     flex: 0 0 48px;
     margin-right: 13px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
   &__info {
 
   }
   &__name {
+    display: inline-block;
     font-size: 18px;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__text {
     font-size: 14px;
@@ -33,5 +33,13 @@
     position: absolute;
     top: 13px;
     right: 45px;
+  }
+  @media(max-width: $tablet) {
+    width: 50%;
+    margin-bottom: 48px;
+    padding-right: 32px;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
   }
 }

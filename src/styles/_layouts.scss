@@ -1,14 +1,46 @@
 .page-wrapper {
+  &.side-menu-opened {
+    .page-content {
+
+    }
+    .side-menu {
+
+    }
+  }
 }
 
 .page-content {
-  margin-left: 330px;
+  margin-left: $menu-width;
   transition: margin 0.3s;
-  @media (max-width: 700px) {
-    margin-left: 0;
-  }
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .main {
   padding: 25px 48px;
+}
+
+@media (max-width: $tablet) {
+  .page-content {
+    margin-left: $tablet-menu-width;
+  }
+  .main {
+    padding: 25px 24px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-wrapper {
+    &.side-menu-opened {
+      .page-content {
+
+      }
+      .side-menu {
+        transform: translateX(0);
+      }
+    }
+  }
+  .page-content {
+    margin-left: 0;
+  }
 }

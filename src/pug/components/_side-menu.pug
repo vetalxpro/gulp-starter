@@ -7,12 +7,15 @@ include _current-user
   text:'some text'
   };
 
-aside.side-menu
-  .side-menu__title Contact Book
-  +currentUser(user)
-  include _search-contact
+aside.side-menu(data-side-menu='')
+  button.side-menu__close(type='button' data-side-menu-close) &times;
+  .menu-padding
+    .side-menu__title Contact Book
+    +currentUser(user)
+    include _search-contact
   include _categories-list
-  include _coming-birthday
+  .menu-padding
+    include _coming-birthday
   .menu-new-contact-wrapper.menu-padding
     include _menu-new-contact
 

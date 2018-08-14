@@ -1,7 +1,6 @@
-$size: 150px;
-.edit-avatar {
-  width: $size;
-  height: $size;
+.avatar {
+  width: 48px;
+  height: 48px;
   background-color: #cccccc;
   border-radius: 50%;
   overflow: hidden;
@@ -9,16 +8,6 @@ $size: 150px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.3);
-  }
   &__label {
     position: absolute;
     top: 0;
@@ -37,5 +26,24 @@ $size: 150px;
     display: none;
     top: 0;
     left: 0;
+  }
+  &.is-big {
+    width: 150px;
+    height: 150px;
+  }
+  &.is-editable {
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+  &.with-border {
+    border: 2px solid #c30e42;
   }
 }

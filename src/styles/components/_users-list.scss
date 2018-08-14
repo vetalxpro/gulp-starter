@@ -1,4 +1,12 @@
 .users-list {
   display: flex;
   flex-wrap: wrap;
+  margin-right: -40px;
+  min-width: 0;
+  @media (max-width: $tablet) {
+    margin-right: -32px;
+  }
+  @media (max-width: $mobile) {
+
+  }
 }

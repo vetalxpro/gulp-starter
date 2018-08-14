@@ -23,4 +23,8 @@
       background-image: linear-gradient(to right, rgba(126, 142, 218, 0.4), rgba(255, 255, 255, 0));
     }
   }
+  &__link-inner {
+    padding-right: 30px;
+    position: relative;
+  }
 }

@@ -1,8 +1,11 @@
 include _dots-btn
+include _avatar
+
 mixin userItem(user)
   li.user-item
     .user-item__inner
-      a.user-item__avatar(href=user.link style=`background-image:url(${user.avatar})`)
+      a.user-item__avatar(href=user.link)
+        +avatar(false,false,true)
       .user-item__info
         a.user-item__name(href=user.link)= user.name
         .user-item__text= user.text

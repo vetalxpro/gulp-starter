@@ -1,11 +1,12 @@
-include _edit-avatar
+include _avatar
 include _action-btn
 
 form.contact-form(method='post' action='?')
   +actionBtn('delete')
-  .contact-form__group.contact-form__group--top
+  .contact-form__group
     .contact-form__left-col
-      +editAvatar()
+      .contact-form__avatar
+        +avatar(true,true,false)
     .contact-form__right-col
       .contact-form__row
         .control-col.control-col--50
